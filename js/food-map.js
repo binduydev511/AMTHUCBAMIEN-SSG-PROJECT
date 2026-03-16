@@ -65,6 +65,20 @@ function init() {
     mapContainer.addEventListener('mousemove', onMouseMove);
     mapContainer.addEventListener('click', onMapClick);
     mapContainer.addEventListener('touchstart', onMapClick, { passive: false });
+
+    // Click vào card để chuyển đến menu
+    if (foodCard) {
+        foodCard.addEventListener('click', (e) => {
+            e.stopPropagation(); // Ngăn chặn sự kiện click lan ra bản đồ
+            const provinceName = foodCard.dataset.province;
+            console.log('Food card clicked for province:', provinceName);
+            if (provinceName && window.navigateToMenu) {
+                window.navigateToMenu(provinceName);
+            } else {
+                console.warn('Cannot navigate: provinceName or navigateToMenu missing', { provinceName, nav: !!window.navigateToMenu });
+            }
+        });
+    }
 }
 
 function onMapClick(event) {
@@ -418,6 +432,9 @@ function updateFoodCard(name) {
     document.getElementById('card-province').innerText = name;
     document.getElementById('card-dish').innerText = data.dish;
     document.getElementById('card-desc').innerText = data.description;
+
+    // Lưu tên tỉnh vào dataset để dùng khi click
+    foodCard.dataset.province = name;
 
     // Gán đường dẫn hình ảnh từ data, sử dụng ảnh hero.png làm mặc định
     document.getElementById('card-dish-img').src = data.image || 'assets/images/hero.png';

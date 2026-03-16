@@ -756,8 +756,8 @@ document.addEventListener("DOMContentLoaded", () => {
             const container = containers[data.region];
             if (!container) return;
 
-            // Tạo ID chuẩn hóa (ví dụ: "Hà Nội" -> "food-HaNoi")
-            const foodId = `food-${province.normalize("NFD").replace(/[\u0300-\u036f]/g, "").replace(/\s+/g, "")}`;
+            // Tạo ID chuẩn hóa (ví dụ: "Đà Nẵng" -> "food-DaNang")
+            const foodId = `food-${province.normalize("NFD").replace(/[\u0300-\u036f]/g, "").replace(/\s+/g, "").replace(/đ/g, "d").replace(/Đ/g, "D")}`;
 
             const menuItem = document.createElement('div');
             menuItem.className = `menu-item ${data.region}`;
@@ -827,18 +827,21 @@ document.addEventListener("DOMContentLoaded", () => {
         // Chuẩn hóa ID: bỏ dấu, bỏ khoảng trắng (Ví dụ: "Đà Nẵng" -> "DaNang")
         const foodId = `food-${provinceName.normalize("NFD").replace(/[\u0300-\u036f]/g, "").replace(/\s+/g, "").replace(/đ/g, "d").replace(/Đ/g, "D")}`;
 
-        console.log('Navigating to province:', provinceName, 'Target Index:', targetIndex, 'Food ID:', foodId);
+        console.log('[DEBUG] Navigating:', { provinceName, region: province.region, targetIndex, foodId });
 
         // Tạm dừng auto scroll khi điều hướng
         isAutoScrolling = false;
 
-        gotoSection(targetIndex, 1);
+        if (typeof gotoSection === "function") {
+            gotoSection(targetIndex, 1);
+        } else {
+            console.error('[ERROR] gotoSection is not defined!');
+        }
 
-        // Đợi animation của section hoàn tất (khoảng 1.4s) mới scroll đến món ăn
         setTimeout(() => {
             const el = document.getElementById(foodId);
             if (el) {
-                console.log('Found element, scrolling to it...');
+                console.log('Element found, performing scroll and highlight...');
                 el.scrollIntoView({ behavior: 'smooth', block: 'center', inline: 'center' });
 
                 // Hiệu ứng highlight đặc biệt
@@ -855,7 +858,8 @@ document.addEventListener("DOMContentLoaded", () => {
                     }
                 });
             } else {
-                console.warn('Food element not found:', foodId);
+                console.warn('[WARN] Food element not found:', foodId);
+                alert(`Không tìm thấy phần tử món ăn cho tỉnh: ${provinceName} (ID: ${foodId}). Vui lòng kiểm tra lại dữ liệu.`);
             }
 
             // Resume auto-scroll sau một khoảng thời gian
