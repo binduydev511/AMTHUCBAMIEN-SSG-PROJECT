@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ẩm Thực Việt - Hương Vị Truyền Thống</title>
+    <link rel="icon" type="image/jpeg" href="assets/images/z7606882441811_64b00c80306666bf2036968ffc11c6ea.jpg">
+    <link rel="stylesheet" href="css/style.css?v=10">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,700;1,700&family=Krona+One&family=Poppins:wght@200;400;600&display=swap&subset=vietnamese"
+        rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <a href="#" class="logo">
+                <img src="assets/images/z7606882441811_64b00c80306666bf2036968ffc11c6ea.jpg" alt="Logo"
+                    class="logo-img">
+                Ẩm Thực <span>Việt</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="#hero">Trang chủ</a></li>
+                <li><a href="#about">Câu chuyện</a></li>
+                <li><a href="#menu">Món ăn</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section id="hero" class="hero section-scroll">
+        <div class="outer">
+            <div class="inner">
+                <div class="bg">
+                    <video autoplay muted loop playsinline class="hero-video">
+                        <source src="assets/video/Create_loop_video_same_scene_45839858cd.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <div class="container section-content">
+                    <div class="hero-content">
+                        <h1 class="section-heading">Ẩm Thực <span>Ba Miền</span></h1>
+                        <p class="reveal delay-1">Khám phá tinh hoa văn hóa Việt qua những món ăn đặc sản từ ba miền Bắc
+                            - Trung - Nam, trên trực quan bản đồ 3D sinh động.</p>
+                        <div class="hero-btns reveal delay-2">
+                            <a href="#map-section" class="btn btn-primary">Khám phá vùng miền</a>
+                            <a href="#about" class="btn btn-outline">Tìm hiểu thêm</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-down">
+            <span>Cuộn xuống</span>
+            <div class="line"></div>
+        </div>
+    </section>
+
+    <section id="map-section" class="map-section section-scroll">
+        <div class="outer">
+            <div class="inner">
+                <div class="bg"></div>
+                <div class="container section-content">
+                    <div class="section-title">
+                        <span class="sub-title">Khám Phá Vùng Miền</span>
+                        <h2 class="section-heading">Bản Đồ <span>Ẩm Thực</span> Việt Nam</h2>
+                        <p>Di chuột qua các tỉnh thành để khám phá những món ăn đặc sản trứ danh.</p>
+                    </div>
+                    <div class="map-wrapper">
+                        <div id="vietnam-map"></div>
+                        <!-- Food Info Card -->
+                        <div id="food-card" class="food-card">
+                            <div class="card-inner">
+                                <div class="card-img">
+                                    <img id="card-dish-img" src="assets/images/hero.png" alt="Dish">
+                                </div>
+                                <div class="card-body">
+                                    <h4 id="card-province">Tỉnh Thành</h4>
+                                    <h3 id="card-dish">Tên Món Ăn</h3>
+                                    <p id="card-desc">Mô tả đặc điểm và hương vị của món ăn vùng miền này.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="about section-scroll">
+        <div class="outer">
+            <div class="inner">
+                <div class="bg"></div>
+                <div class="container section-content">
+                    <div class="about-grid">
+                        <div class="about-text">
+                            <span class="sub-title">Câu Chuyện Của Chúng Tôi</span>
+                            <h2 class="section-heading">Hành trình xuyên Việt qua từng <span>hương vị</span></h2>
+                            <p>Khởi nguồn từ niềm đam mê bất tận với những giá trị văn hóa truyền thống, "Ẩm Thực Việt"
+                                ra đời
+                                với sứ mệnh mang trọn bộ sưu tập phong vị từ rẻo cao Tây Bắc, nắng gió miền Trung đến
+                                phù sa
+                                sông nước Nam Bộ lên bàn tiệc của bạn.</p>
+                        </div>
+                        <div class="about-image">
+                            <!-- Urban Style Interactive Slider -->
+                            <div class="urban-slider-container">
+                                <main class="content-body">
+                                    <div class="bacground-images">
+                                        <div class="bg1"></div>
+                                        <div class="bg2"></div>
+                                        <div class="bg3"></div>
+                                    </div>
+                                    <aside class="hero-title">
+                                        <p>TRADITIONAL SPECIALITIES</p>
+                                        <hr class="divider">
+                                        <h1>our<br>Speciality<br>Cuisine</h1>
+                                    </aside>
+                                    <ul class="item-list">
+                                        <li class="item">
+                                            <img class="item-img"
+                                                src="assets/images/floating_pho_bowl_1773138715905.png"
+                                                alt="Phở Hà Nội">
+                                            <div class="item-description">
+                                                <h1>Phở Gánh<br>Hà Nội</h1>
+                                                <p>Tinh hoa ẩm thực đất Bắc</p>
+                                            </div>
+                                        </li>
+                                        <li class="item">
+                                            <img class="item-img"
+                                                src="assets/images/floating_bun_bo_hue_1773140164890.png"
+                                                alt="Bún Bò Huế">
+                                            <div class="item-description">
+                                                <h1>Bún Bò<br>Cố Đô Huế</h1>
+                                                <p>Hương vị đậm đà miền Trung</p>
+                                            </div>
+                                        </li>
+                                        <li class="item">
+                                            <img class="item-img"
+                                                src="assets/images/floating_com_tam_plate_1773140183437.png"
+                                                alt="Cơm Tấm Sài Gòn">
+                                            <div class="item-description">
+                                                <h1>Cơm Tấm<br>Sài Gòn</h1>
+                                                <p>Phong vị đặc trưng phương Nam</p>
+                                            </div>
+                                        </li>
+                                        <li class="item">
+                                            <img class="item-img"
+                                                src="assets/images/central_vietnam_dish_bun_bo_hue_mi_quang_1773137658759.png"
+                                                alt="Mì Quảng">
+                                            <div class="item-description">
+                                                <h1>Mì Quảng<br>Quảng Nam</h1>
+                                                <p>Đặc sản vùng đất Quảng</p>
+                                            </div>
+                                        </li>
+                                        <li class="item">
+                                            <img class="item-img" src="assets/images/floating_banh_mi_1773138734373.png"
+                                                alt="Bánh Mì">
+                                            <div class="item-description">
+                                                <h1>Bánh Mì<br>Việt Nam</h1>
+                                                <p>Món ăn đường phố trứ danh</p>
+                                            </div>
+                                        </li>
+                                        <li class="item">
+                                            <img class="item-img"
+                                                src="assets/images/floating_spring_rolls_1773138751072.png"
+                                                alt="Gỏi Cuốn">
+                                            <div class="item-description">
+                                                <h1>Gỏi Cuốn<br>Tươi Ngon</h1>
+                                                <p>Món khai vị thanh mát</p>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </main>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Miền Bắc -->
+    <section id="menu-north" class="menu section-scroll">
+        <div class="outer">
+            <div class="inner">
+                <div class="bg"></div>
+                <div class="container section-content menu-content-full">
+                    <div class="section-title">
+                        <span class="sub-title">Hành Trình Kể Chuyện</span>
+                        <h2 class="section-heading">Ẩm Thực <span>Miền Bắc</span></h2>
+                    </div>
+
+                    <div class="menu-horizontal-wrapper">
+                        <div class="menu-region-row" data-region="North">
+                            <div class="horizontal-scroll-container" id="container-north">
+                                <!-- Sẽ được render động từ map-data.js -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Miền Trung -->
+    <section id="menu-central" class="menu section-scroll">
+        <div class="outer">
+            <div class="inner">
+                <div class="bg"></div>
+                <div class="container section-content menu-content-full">
+                    <div class="section-title">
+                        <span class="sub-title">Hành Trình Kể Chuyện</span>
+                        <h2 class="section-heading">Ẩm Thực <span>Miền Trung</span></h2>
+                    </div>
+
+                    <div class="menu-horizontal-wrapper">
+                        <div class="menu-region-row" data-region="Central">
+                            <div class="horizontal-scroll-container" id="container-central">
+                                <!-- Sẽ được render động từ map-data.js -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Miền Nam -->
+    <section id="menu-south" class="menu section-scroll">
+        <div class="outer">
+            <div class="inner">
+                <div class="bg"></div>
+                <div class="container section-content menu-content-full">
+                    <div class="section-title">
+                        <span class="sub-title">Hành Trình Kể Chuyện</span>
+                        <h2 class="section-heading">Ẩm Thực <span>Miền Nam</span></h2>
+                    </div>
+
+                    <div class="menu-horizontal-wrapper">
+                        <div class="menu-region-row" data-region="South">
+                            <div class="horizontal-scroll-container" id="container-south">
+                                <!-- Sẽ được render động từ map-data.js -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reveal Footer -->
+    <footer class="main-footer">
+        <div class="footer-bg-text">FOOTER</div>
+
+        <!-- Marquee Effect Layer -->
+        <div class="footer-marquee-wrapper" id="footer-marquee-wrapper"
+            style="opacity: 0; visibility: hidden; pointer-events: none;">
+            <div class="marquee-row marquee-left">
+                <span>ẨM THỰC VIỆT • DI SẢN VĂN HÓA • ẨM THỰC VIỆT • DI SẢN VĂN HÓA • ẨM THỰC VIỆT • DI SẢN VĂN HÓA • ẨM
+                    THỰC VIỆT • DI SẢN VĂN HÓA •</span>
+            </div>
+            <div class="marquee-row marquee-right">
+                <span>TRUYỀN THỐNG VIỆT • VỊ QUÊ HƯƠNG • TRUYỀN THỐNG VIỆT • VỊ QUÊ HƯƠNG • TRUYỀN THỐNG VIỆT • VỊ QUÊ
+                    HƯƠNG • TRUYỀN THỐNG VIỆT • VỊ QUÊ HƯƠNG •</span>
+            </div>
+            <div class="marquee-row marquee-left">
+                <span>ẨM THỰC VIỆT • DI SẢN VĂN HÓA • ẨM THỰC VIỆT • DI SẢN VĂN HÓA • ẨM THỰC VIỆT • DI SẢN VĂN HÓA • ẨM
+                    THỰC VIỆT • DI SẢN VĂN HÓA •</span>
+            </div>
+            <div class="marquee-row marquee-right">
+                <span>TRUYỀN THỐNG VIỆT • VỊ QUÊ HƯƠNG • TRUYỀN THỐNG VIỆT • VỊ QUÊ HƯƠNG • TRUYỀN THỐNG VIỆT • VỊ QUÊ
+                    HƯƠNG • TRUYỀN THỐNG VIỆT • VỊ QUÊ HƯƠNG •</span>
+            </div>
+        </div>
+
+        <div class="container footer-content">
+            <div class="footer-grid">
+                <div class="footer-info">
+                    <div class="info-item">
+                        <span class="sub-title">Liên hệ</span>
+                        <p>hello@amthucviet.com</p>
+                    </div>
+                    <div class="info-item">
+                        <span class="sub-title">Theo dõi</span>
+                        <div class="social-links">
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-tiktok"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-nav">
+                    <div class="footer-logo">
+                        Ẩm Thực <span>Việt</span>
+                    </div>
+                    <p class="footer-desc">Gìn giữ và tôn vinh tinh hoa ẩm thực di sản qua những câu chuyện văn hóa đời
+                        thực.</p>
+                </div>
+                <div class="footer-copyright">
+                    <p>© 2026 Ẩm Thực Việt. All rights reserved.</p>
+                    <p>Designed by Antigravity</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+
+    <!-- Travelling Guide: Paper Plane -->
+    <div class="paper-plane">
+        <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+                <linearGradient id="plane-top" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" style="stop-color:#FFB8E0;stop-opacity:1" />
+                    <stop offset="100%" style="stop-color:#66CCFF;stop-opacity:1" />
+                </linearGradient>
+                <linearGradient id="plane-side" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" style="stop-color:#7C5D99;stop-opacity:1" />
+                    <stop offset="100%" style="stop-color:#2B86C5;stop-opacity:1" />
+                </linearGradient>
+            </defs>
+
+            <!-- Cánh chính trái -->
+            <path id="wing-left" d="M50 8 L5 92 L46 78 Z" fill="url(#plane-top)" />
+            <!-- Cánh chính phải -->
+            <path id="wing-right" d="M50 8 L95 92 L54 78 Z" fill="url(#plane-top)" />
+            <!-- Khe hở trung tâm nghệ thuật - Đồng bộ màu -->
+            <path id="plane-body" d="M50 8 L54 78 L46 78 Z" fill="url(#plane-side)" opacity="0.8" />
+            <!-- Đuôi/Phần nếp gấp chân thực -->
+            <path d="M46 78 L50 95 L54 78 Z" fill="url(#plane-side)" />
+        </svg>
+    </div>
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.8.2/d3.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128/examples/js/controls/OrbitControls.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/Observer.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/Draggable.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/Flip.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/MotionPathPlugin.min.js"></script>
+    <script src="https://unpkg.com/split-type"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <script src="js/map-data.js?v=3"></script>
+    <script src="js/food-map.js?v=4"></script>
+    <script src="js/main.js?v=31"></script>
+</body>
+
+</html>
