@@ -689,8 +689,8 @@ document.addEventListener("DOMContentLoaded", () => {
         };
 
         const targetIndex = regionToIndex[province.region];
-        // Tạo ID chuẩn hóa từ tên tỉnh để khớp với ID được render động
-        const targetId = `food-${provinceName.normalize("NFD").replace(/[\u0300-\u036f]/g, "").replace(/\s+/g, "")}`;
+        // Tạo ID chuẩn hóa từ tên tỉnh để khớp với ID được render động (Đồng bộ với initDynamicMenu)
+        const targetId = `food-${provinceName.normalize("NFD").replace(/[\u0300-\u036f]/g, "").replace(/\s+/g, "").replace(/đ/g, "d").replace(/Đ/g, "D")}`;
 
         // 1. Chuyển sang section Menu tương ứng
         gotoSection(targetIndex, 1);
@@ -720,7 +720,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 // Feedback trực quan
                 gsap.fromTo(el, { scale: 1 }, { scale: 1.1, duration: 0.5, yoyo: true, repeat: 1 });
             }
-        }, 1500);
+        }, 1000);
     };
 
     // --- HỖ TRỢ KÉO (DRAGGABLE) TRÊN MENU ---

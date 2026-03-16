@@ -105,8 +105,10 @@ function onMapClick(event) {
         const provinceName = object.name;
         console.log('Interacted with province:', provinceName);
 
-        // Nếu click đúp hoặc click lại chính tỉnh đó thì mới chuyển menu (optional)
-        // Hiện tại: Chỉ hiện card thông tin là đủ tốt cho Mobile UX
+        // Chuyển đến menu khi click vào tỉnh
+        if (window.navigateToMenu) {
+            window.navigateToMenu(provinceName);
+        }
     } else {
         if (currentHover) {
             resetHighlight(currentHover);
